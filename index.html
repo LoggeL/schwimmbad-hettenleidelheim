@@ -13,6 +13,7 @@
     <link rel="icon" href="assets/images/favicon.ico">
     <link rel="apple-touch-icon" href="assets/images/logo-transparent-small.png">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/app.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -21,7 +22,8 @@
           <img src="assets/images/logo-transparent-small.png" alt="Logo Schwimmbad Hettenleidelheim" width="40" height="40">
           <span>Schwimmbad Hettenleidelheim</span>
         </a>
-        <nav class="nav-links">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menü</button>
+        <nav id="site-nav" class="nav-links">
           <a href="bad.html">Das Bad</a>
           <a href="oeffnungszeiten.html">Öffnungszeiten</a>
           <a href="eintrittspreise.html">Eintrittspreise</a>
