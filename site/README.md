@@ -5,13 +5,13 @@ Plain HTML/CSS rebuild using existing images. No JS framework.
 ### Structure
 - `index.html` and content pages: `bad.html`, `oeffnungszeiten.html`, `eintrittspreise.html`, `foerderverein.html`, `historie.html`, `anfahrt.html`, `impressum.html`, `datenschutz.html`
 - `assets/css/styles.css` – responsive styles
-- `assets/images/Bilder/` – original images and icons
+- `assets/images/` – original images and icons (flattened from `Bilder/`)
 - `assets/foerderverein/Beitrittserklärung.pdf`
 - `robots.txt`, `sitemap.xml`
 
 ### Local preview
 ```bash
-python3 -m http.server 8080 -d .
+python3 -m http.server 8080 -d ./site
 # Open http://localhost:8080/
 ```
 

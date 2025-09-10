@@ -1,0 +1,12 @@
+# Ignore fetched mirror and built static site folders
+site_mirror/
+site/
+
+# Common temp files
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+dist/
+build/
+

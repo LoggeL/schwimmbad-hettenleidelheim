@@ -79,7 +79,7 @@ a:hover { text-decoration: underline; }
 
 /* Hero */
 .hero {
-  background: linear-gradient(0deg, #ffffff, #ffffff), url("../images/Bilder/index-70.jpg") center/cover no-repeat;
+  background: linear-gradient(0deg, #ffffff, #ffffff), url("../images/index-70.jpg") center/cover no-repeat;
   background-blend-mode: screen;
   padding: 4rem 0 2rem;
 }
