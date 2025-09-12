@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+@theme inline {
+	--color-sky-500: #0ea5e9;
+	--color-site-900: #0f172a;
+	--color-site-800: #111827;
+	--color-site-700: #e5e7eb;
+}
+
+html,
+body {
+	min-height: 100%;
+}
+
+.prose a {
+	text-decoration: underline;
+}
+
