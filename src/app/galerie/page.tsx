@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import fs from 'node:fs'
+import path from 'node:path'
 
 export const metadata = {
 	title: 'Galerie – Freibad Hettenleidelheim',
@@ -6,6 +8,15 @@ export const metadata = {
 }
 
 function getGalleryImages() {
+	const galleryDir = path.join(process.cwd(), 'public', 'gallery')
+	try {
+		const files = fs.readdirSync(galleryDir)
+		return files
+			.filter((file) => /\.(png|jpe?g|gif|webp|svg|avif)$/i.test(file))
+			.sort((a, b) => a.localeCompare(b))
+	} catch (err) {
+		return []
+	}
 	// Static list to avoid runtime folder scanning
 	const files = [
 		'arbeitseinsatz.jpg',
