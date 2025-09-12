@@ -17,6 +17,33 @@ function getGalleryImages() {
 	} catch (err) {
 		return []
 	}
+	// Static list to avoid runtime folder scanning
+	const files = [
+		'arbeitseinsatz.jpg',
+		'begegnungsplatz.JPG',
+		'bodentrampolin.JPG',
+		'Durchschreitebecken2019.JPG',
+		'eingebautes_Reck.JPG',
+		'Einweihung_Weg.JPG',
+		'fahrradstaender.JPG',
+		'headermitlogo-60.jpg',
+		'ibench.JPG',
+		'index-70.jpg',
+		'Ladestation.JPG',
+		'logo-transparent-small.png',
+		'nichtschwimmer.jpg',
+		'plane_geschlossen.JPG',
+		'schaukel_begegnungsplatz.JPG',
+		'schwimmbad_2023.jpg',
+		'skate2017.jpg',
+		'SWRFernsehen.JPG',
+		'tischtennisplatte.JPG',
+		'Umkleiden.JPG',
+		'umrandung.JPG',
+		'wertschliessfaecher_aussen.JPG',
+		'wertschliessfaecher_innen.JPG',
+	]
+	return files.sort((a, b) => a.localeCompare(b))
 }
 
 export default function GaleriePage() {

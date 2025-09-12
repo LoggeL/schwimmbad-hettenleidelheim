@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export const metadata = { title: 'Impressum – Freibad Hettenleidelheim' }
 
 export default function ImpressumPage() {
@@ -34,6 +35,17 @@ export default function ImpressumPage() {
 				</p>
 				<h3>Urheberrecht</h3>
 				<p>Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheberrecht.</p>
+			</div>
+			<div className='grid gap-4 sm:grid-cols-3'>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/headermitlogo-60.jpg`} alt='Logo im Header' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/index-70.jpg`} alt='Bad Übersicht' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/SWRFernsehen.JPG`} alt='SWR Fernsehen' fill className='object-cover' />
+				</div>
 			</div>
 		</div>
 	)

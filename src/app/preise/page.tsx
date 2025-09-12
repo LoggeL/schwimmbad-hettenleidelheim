@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export const metadata = { title: 'Eintrittspreise – Freibad Hettenleidelheim' }
 
 export default function PricesPage() {
@@ -29,6 +30,17 @@ export default function PricesPage() {
 				<h2 className='text-lg font-semibold text-amber-800'>Ermäßigungen</h2>
 				<p className='mt-2 text-amber-900'>50% Ermäßigung für Schwerbehinderte, Empfänger von Sozialleistungen und Personen in Ausbildung. Kinder unter 6 Jahren: frei.</p>
 				<p className='mt-2 text-sm text-amber-900'>Angaben ohne Gewähr. Maßgeblich sind die Aushänge bzw. Informationen der Verbandsgemeinde.</p>
+			</div>
+			<div className='grid gap-4 sm:grid-cols-3'>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/wertschliessfaecher_innen.JPG`} alt='Wertschließfächer innen' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/Umkleiden.JPG`} alt='Umkleiden' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/ibench.JPG`} alt='Sitzbank im Bad' fill className='object-cover' />
+				</div>
 			</div>
 		</div>
 	)

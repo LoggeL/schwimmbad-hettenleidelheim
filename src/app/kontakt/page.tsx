@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export const metadata = { title: 'Anfahrt & Kontakt – Freibad Hettenleidelheim' }
 
 export default function ContactPage() {
@@ -25,6 +26,17 @@ export default function ContactPage() {
 				</div>
 				<div id='karte' className='rounded-xl overflow-hidden ring-1 ring-slate-200'>
 					<iframe title='Karte Hettenleidelheim' loading='lazy' referrerPolicy='no-referrer-when-downgrade' className='h-80 w-full' src='https://www.google.com/maps?q=Am%20Schwimmbad%2025%2C%2067310%20Hettenleidelheim&output=embed' />
+				</div>
+			</div>
+			<div className='grid gap-4 sm:grid-cols-3'>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/fahrradstaender.JPG`} alt='Fahrradständer' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/Ladestation.JPG`} alt='Ladestation' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={`/gallery/begegnungsplatz.JPG`} alt='Begegnungsplatz' fill className='object-cover' />
 				</div>
 			</div>
 		</div>
