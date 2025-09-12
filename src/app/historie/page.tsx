@@ -1,7 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import fs from 'node:fs'
-import path from 'node:path'
 
 export const metadata = {
   title: 'Historie – Freibad Hettenleidelheim',
@@ -9,15 +6,28 @@ export const metadata = {
 }
 
 function getDiaImages() {
-  const galleryDir = path.join(process.cwd(), 'public', 'gallery')
-  try {
-    const files = fs.readdirSync(galleryDir)
-    return files
-      .filter((file) => /^Dia\d+\.(?:jpe?g|png|webp|gif|avif|svg)$/i.test(file))
-      .sort((a, b) => a.localeCompare(b))
-  } catch (err) {
-    return []
-  }
+  const files = [
+    'Dia01.jpg',
+    'Dia02.jpg',
+    'Dia03.jpg',
+    'Dia04.jpg',
+    'Dia05.jpg',
+    'Dia06.jpg',
+    'Dia07.jpg',
+    'Dia08.jpg',
+    'Dia09.jpg',
+    'Dia10.jpg',
+    'Dia21.jpg',
+    'Dia22.jpg',
+    'Dia23.jpg',
+    'Dia24.jpg',
+    'Dia25.jpg',
+    'Dia27.jpg',
+    'Dia28.jpg',
+    'Dia29.jpg',
+    'Dia30.jpg',
+  ]
+  return files.sort((a, b) => a.localeCompare(b))
 }
 
 export default function HistoriePage() {
@@ -35,11 +45,11 @@ export default function HistoriePage() {
         <ul className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           {images.map((file) => (
             <li key={file} className='group overflow-hidden rounded-lg ring-1 ring-slate-200 bg-white'>
-              <Link href={`/gallery/${file}`} target='_blank' rel='noopener noreferrer'>
+              <a href={`/gallery/${file}`} target='_blank' rel='noopener noreferrer'>
                 <div className='relative aspect-[4/3]'>
                   <Image src={`/gallery/${file}`} alt={file} fill sizes='(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw' className='object-cover transition-transform duration-300 group-hover:scale-105' />
                 </div>
-              </Link>
+              </a>
               <div className='p-3 text-sm text-slate-600'>{file.replace(/\.[^.]+$/, '')}</div>
             </li>
           ))}
