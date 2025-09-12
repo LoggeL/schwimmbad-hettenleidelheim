@@ -1,40 +1,17 @@
-import fs from 'node:fs'
-import path from 'node:path'
-import Link from 'next/link'
 
 export const metadata = { title: 'Downloads – Freibad Hettenleidelheim' }
 
 type DownloadFile = { name: string; href: string; sizeKb: number }
 
 function getAllPdfs(): DownloadFile[] {
-  const publicDir = path.join(process.cwd(), 'public')
-
-  function walk(dir: string): string[] {
-    const entries = fs.readdirSync(dir, { withFileTypes: true })
-    const files: string[] = []
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name)
-      if (entry.isDirectory()) {
-        files.push(...walk(fullPath))
-      } else if (/\.pdf$/i.test(entry.name)) {
-        files.push(fullPath)
-      }
-    }
-    return files
-  }
-
-  if (!fs.existsSync(publicDir)) return []
-  const pdfPaths = walk(publicDir)
-  return pdfPaths
-    .map((absPath) => {
-      const rel = absPath.replace(publicDir, '')
-      const stat = fs.statSync(absPath)
-      return {
-        name: path.basename(absPath),
-        href: `${rel}`.replace(/\\/g, '/'),
-        sizeKb: Math.max(1, Math.round(stat.size / 1024)),
-      }
-    })
+  // Static list of PDFs relative to public root
+  const files: { path: string; sizeKb: number }[] = [
+    // Example entries (update as needed when adding PDFs)
+    // { path: '/mitgliedsantrag.pdf', sizeKb: 123 },
+    // { path: '/satzung.pdf', sizeKb: 456 },
+  ]
+  return files
+    .map(({ path, sizeKb }) => ({ name: path.split('/').pop() || path, href: path, sizeKb }))
     .sort((a, b) => a.name.localeCompare(b.name))
 }
 
@@ -60,9 +37,9 @@ export default function DownloadsPage() {
               .filter((f) => /mitglied/i.test(f.name))
               .map((f) => (
                 <li key={f.href} className='flex items-center justify-between p-3'>
-                  <Link className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
+                  <a className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
                     {f.name}
-                  </Link>
+                  </a>
                   <span className='text-xs text-slate-500'>{f.sizeKb} KB</span>
                 </li>
               ))}
@@ -80,9 +57,9 @@ export default function DownloadsPage() {
               .filter((f) => /satzung/i.test(f.name))
               .map((f) => (
                 <li key={f.href} className='flex items-center justify-between p-3'>
-                  <Link className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
+                  <a className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
                     {f.name}
-                  </Link>
+                  </a>
                   <span className='text-xs text-slate-500'>{f.sizeKb} KB</span>
                 </li>
               ))}
@@ -98,9 +75,9 @@ export default function DownloadsPage() {
           <ul className='divide-y divide-slate-200 rounded-lg border border-slate-200 bg-white'>
             {files.map((f) => (
               <li key={f.href} className='flex items-center justify-between p-3'>
-                <Link className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
+                <a className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
                   {f.name}
-                </Link>
+                </a>
                 <span className='text-xs text-slate-500'>{f.sizeKb} KB</span>
               </li>
             ))}
