@@ -38,7 +38,7 @@ export default function GaleriePage() {
 						<li key={file} className='group overflow-hidden rounded-lg ring-1 ring-slate-200 bg-white'>
 							<a href={`${prefix}/gallery/${file}`} target='_blank' rel='noopener noreferrer'>
 								<div className='relative aspect-[4/3]'>
-									<Image src={`/gallery/${file}`} alt={file} fill sizes='(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw' className='object-cover transition-transform duration-300 group-hover:scale-105' />
+									<Image src={`${prefix}/gallery/${file}`} alt={file} fill sizes='(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw' className='object-cover transition-transform duration-300 group-hover:scale-105' />
 								</div>
 							</a>
 						</li>

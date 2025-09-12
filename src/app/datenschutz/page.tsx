@@ -2,6 +2,7 @@ import Image from 'next/image'
 export const metadata = { title: 'Datenschutz – Freibad Hettenleidelheim' }
 
 export default function PrivacyPage() {
+	const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 	return (
 		<div className='space-y-8'>
 			<h1 className='text-3xl font-bold'>Datenschutz</h1>
@@ -42,13 +43,13 @@ export default function PrivacyPage() {
 			</div>
 			<div className='grid gap-4 sm:grid-cols-3'>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/plane_geschlossen.JPG'} alt='Abdeckung geschlossen' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/plane_geschlossen.JPG`} alt='Abdeckung geschlossen' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/tischtennisplatte.JPG'} alt='Tischtennisplatte' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/tischtennisplatte.JPG`} alt='Tischtennisplatte' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/bodentrampolin.JPG'} alt='Bodentrampolin' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/bodentrampolin.JPG`} alt='Bodentrampolin' fill className='object-cover' />
 				</div>
 			</div>
 		</div>

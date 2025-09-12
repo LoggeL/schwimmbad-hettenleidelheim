@@ -2,6 +2,7 @@ import Image from 'next/image'
 export const metadata = { title: 'Öffnungszeiten – Freibad Hettenleidelheim' }
 
 export default function HoursPage() {
+	const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 	return (
 		<div className='space-y-8'>
 			<h1 className='text-3xl font-bold'>Öffnungszeiten</h1>
@@ -23,13 +24,13 @@ export default function HoursPage() {
 			</div>
 			<div className='grid gap-4 sm:grid-cols-3'>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/nichtschwimmer.jpg'} alt='Nichtschwimmerbereich' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/nichtschwimmer.jpg`} alt='Nichtschwimmerbereich' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/umrandung.JPG'} alt='Anlagen im Bad' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/umrandung.JPG`} alt='Anlagen im Bad' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/schwimmbad_2023.jpg'} alt='Freibad 2023' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/schwimmbad_2023.jpg`} alt='Freibad 2023' fill className='object-cover' />
 				</div>
 			</div>
 		</div>

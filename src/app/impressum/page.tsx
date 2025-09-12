@@ -2,6 +2,7 @@ import Image from 'next/image'
 export const metadata = { title: 'Impressum – Freibad Hettenleidelheim' }
 
 export default function ImpressumPage() {
+	const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 	return (
 		<div className='space-y-8'>
 			<h1 className='text-3xl font-bold'>Impressum</h1>
@@ -38,13 +39,13 @@ export default function ImpressumPage() {
 			</div>
 			<div className='grid gap-4 sm:grid-cols-3'>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/headermitlogo-60.jpg'} alt='Logo im Header' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/headermitlogo-60.jpg`} alt='Logo im Header' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/index-70.jpg'} alt='Bad Übersicht' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/index-70.jpg`} alt='Bad Übersicht' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={'/gallery/SWRFernsehen.JPG'} alt='SWR Fernsehen' fill className='object-cover' />
+					<Image src={`${prefix}/gallery/SWRFernsehen.JPG`} alt='SWR Fernsehen' fill className='object-cover' />
 				</div>
 			</div>
 		</div>
