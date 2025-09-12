@@ -2,7 +2,6 @@ import Image from 'next/image'
 export const metadata = { title: 'Datenschutz – Freibad Hettenleidelheim' }
 
 export default function PrivacyPage() {
-	const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 	return (
 		<div className='space-y-8'>
 			<h1 className='text-3xl font-bold'>Datenschutz</h1>

@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import Link from 'next/link'
 
 export const metadata = { title: 'Downloads – Freibad Hettenleidelheim' }
 
@@ -24,14 +25,13 @@ function getAllPdfs(): DownloadFile[] {
 
   if (!fs.existsSync(publicDir)) return []
   const pdfPaths = walk(publicDir)
-  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
   return pdfPaths
     .map((absPath) => {
       const rel = absPath.replace(publicDir, '')
       const stat = fs.statSync(absPath)
       return {
         name: path.basename(absPath),
-        href: `${prefix}${rel}`.replace(/\\/g, '/'),
+        href: `${rel}`.replace(/\\/g, '/'),
         sizeKb: Math.max(1, Math.round(stat.size / 1024)),
       }
     })
@@ -60,9 +60,9 @@ export default function DownloadsPage() {
               .filter((f) => /mitglied/i.test(f.name))
               .map((f) => (
                 <li key={f.href} className='flex items-center justify-between p-3'>
-                  <a className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
+                  <Link className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
                     {f.name}
-                  </a>
+                  </Link>
                   <span className='text-xs text-slate-500'>{f.sizeKb} KB</span>
                 </li>
               ))}
@@ -80,9 +80,9 @@ export default function DownloadsPage() {
               .filter((f) => /satzung/i.test(f.name))
               .map((f) => (
                 <li key={f.href} className='flex items-center justify-between p-3'>
-                  <a className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
+                  <Link className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
                     {f.name}
-                  </a>
+                  </Link>
                   <span className='text-xs text-slate-500'>{f.sizeKb} KB</span>
                 </li>
               ))}
@@ -98,9 +98,9 @@ export default function DownloadsPage() {
           <ul className='divide-y divide-slate-200 rounded-lg border border-slate-200 bg-white'>
             {files.map((f) => (
               <li key={f.href} className='flex items-center justify-between p-3'>
-                <a className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
+                <Link className='text-sky-700 hover:text-sky-900 underline' href={f.href} download>
                   {f.name}
-                </a>
+                </Link>
                 <span className='text-xs text-slate-500'>{f.sizeKb} KB</span>
               </li>
             ))}

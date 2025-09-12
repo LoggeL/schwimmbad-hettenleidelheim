@@ -2,7 +2,6 @@ import Image from 'next/image'
 export const metadata = { title: 'Eintrittspreise – Freibad Hettenleidelheim' }
 
 export default function PricesPage() {
-	const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 	return (
 		<div className='space-y-8'>
 			<h1 className='text-3xl font-bold'>Eintrittspreise</h1>
@@ -34,13 +33,13 @@ export default function PricesPage() {
 			</div>
 			<div className='grid gap-4 sm:grid-cols-3'>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={`${prefix}/gallery/wertschliessfaecher_innen.JPG`} alt='Wertschließfächer innen' fill className='object-cover' />
+					<Image src={`/gallery/wertschliessfaecher_innen.JPG`} alt='Wertschließfächer innen' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={`${prefix}/gallery/Umkleiden.JPG`} alt='Umkleiden' fill className='object-cover' />
+					<Image src={`/gallery/Umkleiden.JPG`} alt='Umkleiden' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={`${prefix}/gallery/ibench.JPG`} alt='Sitzbank im Bad' fill className='object-cover' />
+					<Image src={`/gallery/ibench.JPG`} alt='Sitzbank im Bad' fill className='object-cover' />
 				</div>
 			</div>
 		</div>
