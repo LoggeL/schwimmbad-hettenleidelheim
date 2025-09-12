@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 	title: 'Freibad Hettenleidelheim',
 	description:
 		'Freibad Hettenleidelheim – Öffnungszeiten, Preise, Anfahrt, Förderverein und mehr.',
-	metadataBase: new URL('https://www.schwimmbad-hettenleidelheim.de'),
+	metadataBase: new URL('https://www.schwimmbad-hettenleidelheim.de/Schwimmbad-hettenleidelheim'),
 	openGraph: {
 		title: 'Freibad Hettenleidelheim',
 		description:

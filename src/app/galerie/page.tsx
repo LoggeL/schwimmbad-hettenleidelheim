@@ -13,6 +13,8 @@ function getGalleryImages() {
 		const files = fs.readdirSync(galleryDir)
 		return files
 			.filter((file) => /\.(png|jpe?g|gif|webp|svg|avif)$/i.test(file))
+			// Exclude historical dia images here; they go to Historie page
+			.filter((file) => !/^dia\d+\.(?:jpe?g|png|webp|gif|avif|svg)$/i.test(file))
 			.sort((a, b) => a.localeCompare(b))
 	} catch (err) {
 		return []
@@ -21,6 +23,7 @@ function getGalleryImages() {
 
 export default function GaleriePage() {
 	const images = getGalleryImages()
+	const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 	return (
 		<div className='space-y-8'>
 			<header>
@@ -33,7 +36,7 @@ export default function GaleriePage() {
 				<ul className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
 					{images.map((file) => (
 						<li key={file} className='group overflow-hidden rounded-lg ring-1 ring-slate-200 bg-white'>
-							<a href={`/gallery/${file}`} target='_blank' rel='noopener noreferrer'>
+							<a href={`${prefix}/gallery/${file}`} target='_blank' rel='noopener noreferrer'>
 								<div className='relative aspect-[4/3]'>
 									<Image src={`/gallery/${file}`} alt={file} fill sizes='(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw' className='object-cover transition-transform duration-300 group-hover:scale-105' />
 								</div>

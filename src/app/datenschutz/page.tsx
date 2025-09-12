@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export const metadata = { title: 'Datenschutz – Freibad Hettenleidelheim' }
 
 export default function PrivacyPage() {
@@ -38,6 +39,17 @@ export default function PrivacyPage() {
 						info@schwimmbad-hettenleidelheim.de
 					</a>
 				</p>
+			</div>
+			<div className='grid gap-4 sm:grid-cols-3'>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={'/gallery/plane_geschlossen.JPG'} alt='Abdeckung geschlossen' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={'/gallery/tischtennisplatte.JPG'} alt='Tischtennisplatte' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={'/gallery/bodentrampolin.JPG'} alt='Bodentrampolin' fill className='object-cover' />
+				</div>
 			</div>
 		</div>
 	)

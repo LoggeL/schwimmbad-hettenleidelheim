@@ -28,11 +28,17 @@ export default function Header() {
 					<Link href='/galerie' className='hover:text-sky-600'>
 						Galerie
 					</Link>
+					<Link href='/historie' className='hover:text-sky-600'>
+						Historie
+					</Link>
 					<Link href='/kontakt' className='hover:text-sky-600'>
 						Anfahrt & Kontakt
 					</Link>
 					<Link href='/foerderverein' className='hover:text-sky-600'>
 						Förderverein
+					</Link>
+					<Link href='/downloads' className='hover:text-sky-600'>
+						Downloads
 					</Link>
 				</nav>
 				<button
@@ -66,6 +72,9 @@ export default function Header() {
 						<Link href='/galerie' onClick={() => setOpen(false)} className='hover:text-sky-600'>
 							Galerie
 						</Link>
+						<Link href='/historie' onClick={() => setOpen(false)} className='hover:text-sky-600'>
+							Historie
+						</Link>
 						<Link href='/kontakt' onClick={() => setOpen(false)} className='hover:text-sky-600'>
 							Anfahrt & Kontakt
 						</Link>
@@ -77,6 +86,9 @@ export default function Header() {
 						</Link>
 						<Link href='/datenschutz' onClick={() => setOpen(false)} className='hover:text-sky-600'>
 							Datenschutz
+						</Link>
+						<Link href='/downloads' onClick={() => setOpen(false)} className='hover:text-sky-600'>
+							Downloads
 						</Link>
 					</nav>
 				</div>
