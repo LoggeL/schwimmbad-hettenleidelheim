@@ -16,3 +16,15 @@ body {
 	text-decoration: underline;
 }
 
+/* Subtle typography improvements */
+h1,h2,h3 { scroll-margin-top: 5rem; }
+.prose h2 { margin-top: 1.5em; }
+.prose h3 { margin-top: 1.25em; }
+.prose p { line-height: 1.75; }
+.prose ul { margin-top: 0.75rem; }
+.prose li { margin-top: 0.25rem; }
+
+/* Image grid helpers if needed */
+.img-grid { display: grid; gap: 1rem; }
+.img-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+

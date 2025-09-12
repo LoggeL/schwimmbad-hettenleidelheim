@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export const metadata = { title: 'Öffnungszeiten – Freibad Hettenleidelheim' }
 
 export default function HoursPage() {
@@ -18,6 +19,17 @@ export default function HoursPage() {
 					<h2 className='text-xl font-semibold'>Hinweise bei Wetter</h2>
 					<p className='mt-2 text-slate-700'>Bei sehr schlechtem Wetter kann das Bad geschlossen bleiben. Bitte prüfen Sie kurzfristige Änderungen über die Verbandsgemeinde.</p>
 					<a className='mt-4 inline-flex items-center rounded-md bg-sky-500 px-4 py-2.5 text-white hover:bg-sky-600' target='_blank' rel='noopener' href='https://freibad.vg-l.de/'>Online‑Tickets</a>
+				</div>
+			</div>
+			<div className='grid gap-4 sm:grid-cols-3'>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={'/gallery/nichtschwimmer.jpg'} alt='Nichtschwimmerbereich' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={'/gallery/umrandung.JPG'} alt='Anlagen im Bad' fill className='object-cover' />
+				</div>
+				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
+					<Image src={'/gallery/schwimmbad_2023.jpg'} alt='Freibad 2023' fill className='object-cover' />
 				</div>
 			</div>
 		</div>
