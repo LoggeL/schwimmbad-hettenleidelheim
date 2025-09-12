@@ -16,11 +16,17 @@ export default function Header() {
 					<span>Freibad Hettenleidelheim</span>
 				</Link>
 				<nav className='ml-auto hidden md:flex items-center gap-6 text-sm'>
+					<Link href='/' className='hover:text-sky-600'>
+						Startseite
+					</Link>
 					<Link href='/oeffnungszeiten' className='hover:text-sky-600'>
 						Öffnungszeiten
 					</Link>
 					<Link href='/preise' className='hover:text-sky-600'>
 						Preise
+					</Link>
+					<Link href='/galerie' className='hover:text-sky-600'>
+						Galerie
 					</Link>
 					<Link href='/kontakt' className='hover:text-sky-600'>
 						Anfahrt & Kontakt
@@ -48,11 +54,17 @@ export default function Header() {
 			{open && (
 				<div className='md:hidden border-t border-slate-200'>
 					<nav className='mx-auto max-w-7xl px-4 py-3 flex flex-col gap-3 text-sm'>
+						<Link href='/' onClick={() => setOpen(false)} className='hover:text-sky-600'>
+							Startseite
+						</Link>
 						<Link href='/oeffnungszeiten' onClick={() => setOpen(false)} className='hover:text-sky-600'>
 							Öffnungszeiten
 						</Link>
 						<Link href='/preise' onClick={() => setOpen(false)} className='hover:text-sky-600'>
 							Preise
+						</Link>
+						<Link href='/galerie' onClick={() => setOpen(false)} className='hover:text-sky-600'>
+							Galerie
 						</Link>
 						<Link href='/kontakt' onClick={() => setOpen(false)} className='hover:text-sky-600'>
 							Anfahrt & Kontakt
