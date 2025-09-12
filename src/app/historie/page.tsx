@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import fs from 'node:fs'
 import path from 'node:path'
 
@@ -21,7 +22,6 @@ function getDiaImages() {
 
 export default function HistoriePage() {
   const images = getDiaImages()
-  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
   return (
     <div className='space-y-8'>
       <header>
@@ -35,11 +35,11 @@ export default function HistoriePage() {
         <ul className='grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           {images.map((file) => (
             <li key={file} className='group overflow-hidden rounded-lg ring-1 ring-slate-200 bg-white'>
-              <a href={`${prefix}/gallery/${file}`} target='_blank' rel='noopener noreferrer'>
+              <Link href={`/gallery/${file}`} target='_blank' rel='noopener noreferrer'>
                 <div className='relative aspect-[4/3]'>
-                  <Image src={`${prefix}/gallery/${file}`} alt={file} fill sizes='(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw' className='object-cover transition-transform duration-300 group-hover:scale-105' />
+                  <Image src={`/gallery/${file}`} alt={file} fill sizes='(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw' className='object-cover transition-transform duration-300 group-hover:scale-105' />
                 </div>
-              </a>
+              </Link>
               <div className='p-3 text-sm text-slate-600'>{file.replace(/\.[^.]+$/, '')}</div>
             </li>
           ))}

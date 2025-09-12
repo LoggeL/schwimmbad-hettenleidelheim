@@ -2,7 +2,6 @@ import Image from 'next/image'
 export const metadata = { title: 'Anfahrt & Kontakt – Freibad Hettenleidelheim' }
 
 export default function ContactPage() {
-	const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ''
 	return (
 		<div className='space-y-8'>
 			<h1 className='text-3xl font-bold'>Anfahrt & Kontakt</h1>
@@ -31,13 +30,13 @@ export default function ContactPage() {
 			</div>
 			<div className='grid gap-4 sm:grid-cols-3'>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={`${prefix}/gallery/fahrradstaender.JPG`} alt='Fahrradständer' fill className='object-cover' />
+					<Image src={`/gallery/fahrradstaender.JPG`} alt='Fahrradständer' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={`${prefix}/gallery/Ladestation.JPG`} alt='Ladestation' fill className='object-cover' />
+					<Image src={`/gallery/Ladestation.JPG`} alt='Ladestation' fill className='object-cover' />
 				</div>
 				<div className='relative aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-slate-200'>
-					<Image src={`${prefix}/gallery/begegnungsplatz.JPG`} alt='Begegnungsplatz' fill className='object-cover' />
+					<Image src={`/gallery/begegnungsplatz.JPG`} alt='Begegnungsplatz' fill className='object-cover' />
 				</div>
 			</div>
 		</div>
