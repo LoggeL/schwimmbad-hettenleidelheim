@@ -25,11 +25,19 @@ export default function HomePage() {
 						<p className='mt-4 text-sm text-slate-500'>Saison voraussichtlich: Mai – September. Änderungen vorbehalten.</p>
 					</div>
 					<div className='relative'>
-						<div className='aspect-[4/3] w-full overflow-hidden rounded-xl ring-1 ring-slate-200 shadow-sm bg-gradient-to-br from-sky-200 via-sky-100 to-white flex items-center justify-center'>
-							<svg className='h-24 w-24 text-sky-500' viewBox='0 0 24 24' fill='currentColor' aria-hidden>
-								<path d='M2 16c4-3 8-3 12 0s8 3 8 0V6c-4 3-8 3-12 0S2 3 2 6v10z' />
-							</svg>
+						<div className='aspect-[4/3] w-full overflow-hidden rounded-xl ring-1 ring-slate-200 shadow-sm bg-white'>
+							<img src='/Bilder/headermitlogo-60.jpg' alt='Freibad Hettenleidelheim – Willkommensbild' className='h-full w-full object-cover' />
 						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Online-Tickets Hinweis */}
+			<section className='flex justify-center'>
+				<div className='w-full md:w-auto rounded-xl bg-sky-600 text-white shadow ring-1 ring-sky-700/30'>
+					<div className='px-6 py-5'>
+						<h3 className='text-lg font-semibold'>Eintrittskarte online beziehen!</h3>
+						<p className='mt-1 text-sky-50'>Eintrittskarten können online unter folgendem Link erworben werden: <a className='underline font-medium' href='https://freibad.vg-l.de/' target='_blank' rel='noopener'>freibad.vg-l.de</a></p>
 					</div>
 				</div>
 			</section>
@@ -64,6 +72,30 @@ export default function HomePage() {
 				</div>
 				<div className='rounded-xl overflow-hidden ring-1 ring-slate-200'>
 					<iframe title='Karte Hettenleidelheim' loading='lazy' referrerPolicy='no-referrer-when-downgrade' className='h-72 w-full' src='https://www.google.com/maps?q=Am%20Schwimmbad%2025%2C%2067310%20Hettenleidelheim&output=embed' />
+				</div>
+			</section>
+
+			{/* Großes Stimmungsbild */}
+			<section className='-mx-4'>
+				<img src='/Bilder/index-70.jpg' alt='Schwimmbad Hettenleidelheim – Panorama' className='w-full h-64 md:h-80 object-cover rounded-none md:rounded-xl ring-0 md:ring-1 md:ring-slate-200' />
+			</section>
+
+			{/* Begrüßungstext */}
+			<section>
+				<div className='prose max-w-none'>
+					<p>
+						Verehrte Besucherinnen und Besucher,<br />willkommen auf unserer Internetseite.
+					</p>
+					<p>
+						Hier wollen wir Sie über unser Schwimmbad und unseren Förderverein informieren. Sie finden hier Informationen, Bilder und Berichte aus dem Schwimmbadalltag, ebenso wie von den zahlreichen vom und mit dem Förderverein durchgeführten Aktivitäten.
+					</p>
+					<p>
+						Viel Freude beim virtuellen Gang durch das Schwimmbad Hettenleidelheim.
+					</p>
+					<p>
+						Die Vorstandschaft des Fördervereins<br />
+						Manfred Guth, Jens Vogel, Anja Fürst und Susanne Peters
+					</p>
 				</div>
 			</section>
 		</div>
