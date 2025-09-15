@@ -10,9 +10,7 @@ export default function Header() {
 		<header className='sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200'>
 			<div className='mx-auto max-w-7xl px-4 py-3 flex items-center gap-4'>
 				<Link href='/' className='flex items-center gap-2 font-semibold text-slate-900'>
-					<svg className='h-7 w-7 text-sky-500' viewBox='0 0 24 24' fill='currentColor' aria-hidden>
-						<path d='M2 16c4-3 8-3 12 0s8 3 8 0V6c-4 3-8 3-12 0S2 3 2 6v10z' />
-					</svg>
+					<img src='/Bilder/logo-transparent-small.png' alt='Freibad Hettenleidelheim Logo' className='h-8 w-auto' />
 					<span>Freibad Hettenleidelheim</span>
 				</Link>
 				<nav className='ml-auto hidden md:flex items-center gap-6 text-sm'>
