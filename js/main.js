@@ -1,3 +1,35 @@
+// ============================================================
+// 🔧 SEASON CONFIG - Change this line to toggle open/closed
+// ============================================================
+const POOL_IS_OPEN = false; // Set to true when pool is open, false when closed
+// ============================================================
+
+// Apply status to all status banners on page load
+document.addEventListener('DOMContentLoaded', function() {
+  const statusBanners = document.querySelectorAll('.status-banner');
+  const statusNotices = document.querySelectorAll('.status-notice');
+  
+  statusBanners.forEach(banner => {
+    if (POOL_IS_OPEN) {
+      banner.classList.remove('closed');
+      banner.classList.add('open');
+      banner.innerHTML = '🏊 Jetzt geöffnet!';
+    } else {
+      banner.classList.remove('open');
+      banner.classList.add('closed');
+      banner.innerHTML = '🏊 Aktuell geschlossen';
+    }
+  });
+
+  statusNotices.forEach(notice => {
+    if (POOL_IS_OPEN) {
+      notice.innerHTML = '<h4>🏊 Wir haben geöffnet!</h4><p>Besuchen Sie uns täglich von 09:00 bis 19:00 Uhr. Wir freuen uns auf Sie!</p>';
+    } else {
+      notice.innerHTML = '<h4>🏊 Aktuell geschlossen</h4><p>Wir blicken zurück auf eine tolle Saison, bedanken uns bei allen Besuchern und freuen uns auf ein Wiedersehen in der nächsten Saison.</p>';
+    }
+  });
+});
+
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
   const navToggle = document.querySelector('.nav-toggle');
