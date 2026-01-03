@@ -1,9 +1,12 @@
-node_modules/
-.next/
-out/
-dist/
-*.log
+# OS
 .DS_Store
+Thumbs.db
+
+# Editor
 .idea/
 .vscode/
-_template_next/
+*.swp
+*.swo
+
+# Logs
+*.log
