@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Die Arbeit des Fördervereins Schwimmbad Hettenleidelheim - Unsere Projekte seit 2015 im Überblick.">
+  <title>Die Arbeit des Fördervereins - Schwimmbad Hettenleidelheim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/logo-transparent-small.png">
+  <style>
+    .showcase-grid {
+      display: grid;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .showcase-item {
+      background: white;
+      border-radius: 1.25rem;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .showcase-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+    .showcase-item-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+    }
+    .showcase-item-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .showcase-item:hover .showcase-item-image img {
+      transform: scale(1.03);
+    }
+    .showcase-year {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .showcase-item-body {
+      padding: 2rem;
+    }
+    .showcase-item-body h3 {
+      font-size: 1.4rem;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+    .showcase-item-body p {
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 0.75rem;
+    }
+    .showcase-item-body p:last-child {
+      margin-bottom: 0;
+    }
+    .showcase-intro {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 3rem;
+    }
+    .showcase-intro p {
+      font-size: 1.1rem;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    .back-link {
+      text-align: center;
+      margin-top: 3rem;
+    }
+    @media (min-width: 768px) {
+      .showcase-grid-two {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+      .showcase-grid-two .showcase-item-image {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="images/logo-transparent-small.png" alt="Logo">
+        <span>Schwimmbad Hettenleidelheim</span>
+      </a>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Start</a></li>
+        <li><a href="bad.html">Das Bad</a></li>
+        <li><a href="oeffnungszeiten.html">Öffnungszeiten</a></li>
+        <li><a href="eintrittspreise.html">Eintrittspreise</a></li>
+        <li><a href="foerderverein.html" class="active">Förderverein</a></li>
+        <li><a href="historie.html">Historie</a></li>
+        <li><a href="anfahrt.html">Anfahrt</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Die Arbeit des Fördervereins</h1>
+      <p>Unsere Projekte und Investitionen seit 2015</p>
+    </div>
+  </header>
+
+  <!-- Showcase Section -->
+  <section class="section">
+    <div class="container">
+      <div class="showcase-intro">
+        <p>Seit seiner Gründung 2013 hat der Förderverein zahlreiche Projekte umgesetzt, um das Schwimmbad Hettenleidelheim attraktiver, barrierefreier und moderner zu gestalten. Hier ein Überblick über unsere wichtigsten Maßnahmen.</p>
+      </div>
+
+      <!-- Featured: Latest project -->
+      <div class="showcase-grid" style="margin-bottom: 3rem;">
+        <div class="showcase-item">
+          <div class="showcase-item-image">
+            <img src="images/ibench.JPG" alt="Solar-Sitzbank ibench 2024">
+            <div class="showcase-year">2024</div>
+          </div>
+          <div class="showcase-item-body">
+            <h3>Viele Neuerungen</h3>
+            <p>Dank Spenden wurden 30 neue Wertschließfächer mit Zahlencodeschloss, USB-Anschluss und Steckdose angeschafft.</p>
+            <p>Das Bau- und Planungsbüro Falk Hoffmann spendete ein Edelstahlreck. Dank Leader-Förderung und Sparkassen-Spende wurde eine Solar-Sitzbank (ibench) mit USB-Ladebuchsen und QI-Ladeflächen angeschafft.</p>
+            <p>Der Spielplatz wurde mit einem Bodentrampolin erweitert und die Tischtennisplatte wurde in die Nähe des Spielplatzes verlegt.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-column grid for remaining items -->
+      <div class="showcase-grid-two">
+        <div class="showcase-item">
+          <div class="showcase-item-image">
+            <img src="images/schwimmbad_2023.jpg" alt="Spielplatz-Erweiterung 2023">
+            <div class="showcase-year">2023</div>
+          </div>
+          <div class="showcase-item-body">
+            <h3>Spielplatz-Erweiterung</h3>
+            <p>Mit zwei Drehspielgeräten und zwei Balancierbalken haben wir den Spielplatz erweitert. Die Anschaffungskosten betrugen gut 13.000€. Der Betreiber (AöR) übernahm davon 7.000€. Wir erhielten dazu von der Familie Kirberg noch eine Spende in Höhe von 3.000€.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-item-image">
+            <img src="images/fahrradstaender.JPG" alt="Neue Fahrradständer 2022">
+            <div class="showcase-year">2022</div>
+          </div>
+          <div class="showcase-item-body">
+            <h3>Neue Fahrradständer</h3>
+            <p>Da Fahrräder mittlerweile zum Teil mit dicken Reifen wie ein Moped ausgestattet sind, haben wir die alten Fahrradständer am Eingang entfernt und neue Abstellbögen für alle Arten von Fahrrädern angeschafft.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-item-image">
+            <img src="images/schaukel_begegnungsplatz.JPG" alt="Umkleiden und Spielplatz 2020">
+            <div class="showcase-year">2020</div>
+          </div>
+          <div class="showcase-item-body">
+            <h3>Umkleiden & Spielplatz</h3>
+            <p>Die Sparkasse Rhein-Haardt spendet zwei neue Spiralumkleidekabinen, die auch von Rollstuhlfahrern genutzt werden können.</p>
+            <p>Auf Wunsch vieler Eltern begannen wir mit dem Aufbau eines Kinderspielplatzes. Dank der Unterstützung der Fa. Philippi konnten wir die Aufbaukosten in Höhe von 5.000€ komplett einsparen.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-item-image">
+            <img src="images/begegnungsplatz.JPG" alt="Begegnungsplatz 2019">
+            <div class="showcase-year">2019</div>
+          </div>
+          <div class="showcase-item-body">
+            <h3>Neue Ausstattung / Begegnungsplatz</h3>
+            <p>Auch das Durchschreitebecken ist jetzt barrierefrei. Der Förderverein hat eine E-Bike Ladestation mit drei Schließfächern angeschafft. Der von uns geplante Begegnungsplatz mit Dreiturmspielanlage (Kosten 20.000€) wurde aufgebaut und mit 15.000€ durch Leader gefördert.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-item-image">
+            <img src="images/Einweihung_Weg.JPG" alt="Einweihung barrierefreier Weg 2018">
+            <div class="showcase-year">2018</div>
+          </div>
+          <div class="showcase-item-body">
+            <h3>Barrierefreiheit & Nachtabdeckung</h3>
+            <p>Das Schwimmerbecken erhält eine Nachtabdeckung um die Heizkosten zu senken.</p>
+            <p>Der Förderverein baut einen 42m langen barrierefreien Weg zum Schwimmbecken. Einweihung mit dem Landesbehindertenbeauftragten Matthias Rösch. Der SWR berichtet über das Schwimmbad und den neu angelegten barrierefreien Weg.</p>
+          </div>
+        </div>
+
+        <div class="showcase-item">
+          <div class="showcase-item-image">
+            <img src="images/umrandung.JPG" alt="Neue Umrandung 2015">
+            <div class="showcase-year">2015</div>
+          </div>
+          <div class="showcase-item-body">
+            <h3>Neue Umrandung</h3>
+            <p>Das Baby-Planschbecken erhält vom Förderverein eine neue unfallsichere Umrandung.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-link">
+        <a href="foerderverein.html" class="btn btn-primary">← Zurück zum Förderverein</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Kontakt</h4>
+          <p>Förderverein Schwimmbad Hettenleidelheim e.V.</p>
+          <p>Lauberweg 29</p>
+          <p>67310 Hettenleidelheim</p>
+          <p>Tel: 06351 / 41119</p>
+        </div>
+        <div class="footer-section">
+          <h4>Schwimmbadkasse</h4>
+          <p>Am Schwimmbad 25</p>
+          <p>67310 Hettenleidelheim</p>
+          <p>Tel: 06351 / 12 41 74</p>
+        </div>
+        <div class="footer-section">
+          <h4>Links</h4>
+          <a href="bad.html">Das Bad</a>
+          <a href="oeffnungszeiten.html">Öffnungszeiten</a>
+          <a href="eintrittspreise.html">Eintrittspreise</a>
+          <a href="foerderverein.html">Förderverein</a>
+          <a href="historie.html">Historie</a>
+          <a href="anfahrt.html">Anfahrt</a>
+        </div>
+        <div class="footer-section">
+          <h4>Rechtliches</h4>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutzerklärung</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Förderverein Schwimmbad Hettenleidelheim e.V. | <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
