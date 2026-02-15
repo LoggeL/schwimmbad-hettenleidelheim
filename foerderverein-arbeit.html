@@ -85,6 +85,25 @@
       text-align: center;
       margin-top: 3rem;
     }
+    /* Alternating images animation */
+    .showcase-item-image .img-alternate {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      animation: fadeAlternate 6s ease-in-out infinite;
+    }
+    .showcase-item-image .img-alternate:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .showcase-item-image .img-alternate:nth-child(2) {
+      animation-delay: 3s;
+    }
+    @keyframes fadeAlternate {
+      0%, 42% { opacity: 1; }
+      50%, 92% { opacity: 0; }
+      100% { opacity: 1; }
+    }
     @media (min-width: 768px) {
       .showcase-grid-two {
         display: grid;
@@ -144,7 +163,7 @@
         <!-- 2025: Sanitäranlagen -->
         <div class="showcase-item">
           <div class="showcase-item-image">
-            <img src="images/arbeitseinsatz.jpg" alt="Erneuerung der Sanitäranlagen 2025">
+            <img src="images/vorbauwand10.jpg" alt="Erneuerung der Sanitäranlagen 2025">
             <div class="showcase-year">2025</div>
           </div>
           <div class="showcase-item-body">
@@ -156,7 +175,7 @@
         <!-- 2025: Terrasse & Außenanlagen -->
         <div class="showcase-item">
           <div class="showcase-item-image">
-            <img src="images/arbeitseinsatz.jpg" alt="Terrasse und Außenanlagen 2025">
+            <img src="images/terrasse2025.jpg" alt="Terrasse und Außenanlagen 2025">
             <div class="showcase-year">2025</div>
           </div>
           <div class="showcase-item-body">
@@ -168,7 +187,7 @@
         <!-- 2025: Neue Fußballtore -->
         <div class="showcase-item">
           <div class="showcase-item-image">
-            <img src="images/arbeitseinsatz.jpg" alt="Neue Fußballtore 2025">
+            <img src="images/fussballtor2025.jpg" alt="Neue Fußballtore 2025">
             <div class="showcase-year">2025</div>
           </div>
           <div class="showcase-item-body">
@@ -177,10 +196,11 @@
           </div>
         </div>
 
-        <!-- 2024: Wertschließfächer -->
+        <!-- 2024: Wertschließfächer (2 Bilder abwechselnd) -->
         <div class="showcase-item">
           <div class="showcase-item-image">
-            <img src="images/wertschliessfaecher_aussen.JPG" alt="Neue Wertschließfächer 2024">
+            <img class="img-alternate" src="images/wertschliessfaecher_innen.JPG" alt="Wertschließfächer innen 2024">
+            <img class="img-alternate" src="images/wertschliessfaecher_aussen.JPG" alt="Wertschließfächer außen 2024">
             <div class="showcase-year">2024</div>
           </div>
           <div class="showcase-item-body">
