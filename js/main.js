@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (POOL_IS_OPEN) {
       banner.classList.remove('closed');
       banner.classList.add('open');
-      banner.innerHTML = '🏊 Jetzt geöffnet!';
+      banner.innerHTML = '🏊 Ab sofort geöffnet';
     } else {
       banner.classList.remove('open');
       banner.classList.add('closed');
