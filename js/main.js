@@ -1,7 +1,7 @@
 // ============================================================
 // 🔧 SEASON CONFIG - Change this line to toggle open/closed
 // ============================================================
-const POOL_IS_OPEN = false; // Set to true when pool is open, false when closed
+const POOL_IS_OPEN = true; // Set to true when pool is open, false when closed
 // ============================================================
 
 // Apply status to all status banners on page load
